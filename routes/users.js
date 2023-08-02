@@ -15,7 +15,7 @@ const users = [
   },
 ];
 
-router.get("/users", (req, res) => {
+router.get("/", (req, res) => {
   console.log(users);
   res.send(users);
 });

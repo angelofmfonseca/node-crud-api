@@ -8,7 +8,7 @@ const PORT = 5000;
 
 app.use(bodyParser.json());
 
-app.use("/", usersRoutes);
+app.use("/users", usersRoutes);
 
 app.listen(PORT, () =>
   console.log(`Server listening on port: http://localhost:${PORT}`),
