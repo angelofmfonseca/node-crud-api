@@ -16,7 +16,12 @@ const users = [
 ];
 
 router.get("/", (req, res) => {
-  console.log(users);
+  res.send(users);
+});
+
+router.post("/", (req, res) => {
+  const { firstName, lastName, age } = req.body;
+  users.push({ firstName, lastName, age });
   res.send(users);
 });
 
