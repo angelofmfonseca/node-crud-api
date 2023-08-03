@@ -28,4 +28,14 @@ router.delete("/:id", (req, res) => {
   res.send(users);
 });
 
+router.patch("/:id", (req, res) => {
+  const { id } = req.params;
+  const { firstName, lastName, age } = req.body;
+  const user = users.find((user) => user.id === id);
+  firstName && (user.firstName = firstName);
+  lastName && (user.lastName = lastName);
+  age && (user.age = age);
+  res.send(users);
+});
+
 export default router;
